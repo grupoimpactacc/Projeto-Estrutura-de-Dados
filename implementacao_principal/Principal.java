@@ -1,3 +1,13 @@
+
+/*
+ * GRUPO 3
+ * Bruno de Proença Campos RA: 1903364
+	Guilherme Ribeiro RA: 1902596
+	Kauan Malvino RA: 1902880
+	Leonardo Vallada Viana RA: 1902965
+	Lucas Fileno RA: 1902881
+ */
+
 package implementacao_principal;
 import java.util.Scanner;
 import tad_arvore_binaria.*;
@@ -14,11 +24,11 @@ import tad_pilha.*;
 
 
 public class Principal {
-	
+	// Inicilização da lista de TADs
 	public static String listaTad[] = new String[13];
 	
 	public static void main(String[] args) {
-		
+		// Inicialização dos valores da lista
 		listaTad[0] = "0. TAD-Lista Arranjo";
 		listaTad[1] = "1. TAD-Pilha";
 		listaTad[2] = "2. TAD-Fila";
@@ -35,19 +45,20 @@ public class Principal {
 		
 		exibeMenuPrincipal();
 	}
-	
+	//Exibe o Menu Principal
 	public static void exibeMenuPrincipal() {
-		Scanner entrada = new Scanner(System.in);
-		int ent = 0;
-		
+		//Exibe atraves de um FOR, indice por indice
 		for(int i=0; i < listaTad.length; i++) {
 			System.out.println(listaTad[i]);
 		}
+		//Variavel entrada do tipo Scanner, para receber as entradas do usuario
+		Scanner entrada = new Scanner(System.in);
+		int ent = 0;
 		
 		System.out.println("----------------------");
 		System.out.println("Entre com o número da opção desejada: ");
 		ent = entrada.nextInt();
-		
+		//Exibe o Menu de cada TAD de acordo com o valor de entrada do usuário
 		if(ent == 0) {
 			Lista_Arranjo.exibeMenu();
 		}
